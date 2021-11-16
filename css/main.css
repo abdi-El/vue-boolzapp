@@ -34,7 +34,7 @@ li {
 }
 /* aside header */
 aside header {
-  height: 13%;
+  height: 9%;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -67,3 +67,32 @@ aside .options > * {
   line-height: 100%;
 }
 /* aside notification */
+.notification {
+  display: flex;
+  height: 10%;
+  background-color: #a2dffe;
+  padding: 15px;
+}
+.bell {
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a2dffe;
+  background-color: white;
+  border-radius: 50%;
+}
+.bell-text > * {
+  display: block;
+  line-height: 20px;
+  margin: 0px 10px;
+}
+.bell-text span:first-child {
+  font-size: 14px;
+}
+.bell-text span:last-child {
+  font-size: 0.8rem;
+  color: #888787;
+}
