@@ -16,7 +16,35 @@ body {
 li {
   list-style: none;
 }
-
+.message {
+  height: 50px;
+  width: 40%;
+  margin-top: 50px;
+  padding: 0px 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sent {
+  background-color: #ddfabf;
+  align-self: flex-end;
+}
+.recieved {
+  background-color: white;
+  align-self: flex-start;
+  margin-top: 50px;
+}
+.message-text {
+  text-align: left;
+  line-height: 80%;
+  vertical-align: middle;
+}
+.message-date {
+  text-align: right;
+  font-size: 10px;
+  color: #bec1c3;
+}
 /* UTILITIES */
 .container {
   width: 85%;
@@ -36,7 +64,7 @@ li {
 /* aside header */
 aside header,
 .main-section header {
-  height: 9%;
+  height: 70px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -101,14 +129,14 @@ aside .options > * {
 .search {
   display: flex;
   padding: 8px;
-  background-color: #ededed;
+  background-color: #fbfbfb;
 }
 .search button {
   width: 20%;
   height: 30px;
   display: inline-block;
   background-color: white;
-  border: 0.5px solid rgb(235, 231, 231);
+  border: 0.1px solid #f6f6f6;
   color: #bababa;
 }
 .search input {
@@ -117,7 +145,7 @@ aside .options > * {
   padding: 5px;
   display: inline-block;
   background-color: white;
-  border: 0.5px solid rgb(233, 230, 230);
+  border: 0.1px solid #f6f6f6;
   color: #bababa;
 }
 
@@ -129,6 +157,7 @@ aside .options > * {
   height: 75px;
   padding: 10px;
   background-color: white;
+  border-top: 1px solid #ededed;
 }
 .contact span {
   margin-left: 10px;
@@ -136,6 +165,8 @@ aside .options > * {
 /* MAIN SECTION */
 .main-section {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 /* main section header */
 .main-section header {
@@ -159,4 +190,46 @@ aside .options > * {
 .main-section header .options > * {
   font-size: 20px;
   margin: 0px 10px;
+}
+/* main-section main */
+main {
+  flex-grow: 1;
+  background-image: url("/img/mine.jpg");
+}
+.message-container {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+/* main section footer */
+footer {
+  height: 9%;
+  display: flex;
+  background-color: #f4f0ed;
+  border-left: 1px solid #c9c7c6;
+  padding: 10px;
+}
+footer input {
+  flex-grow: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.attach-chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-size: 30px;
+  color: #777e82;
+}
+
+/* effects */
+.contact:hover {
+  cursor: pointer;
+  background-color: #ededed;
 }
