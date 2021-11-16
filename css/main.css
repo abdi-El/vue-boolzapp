@@ -22,6 +22,7 @@ li {
   width: 85%;
   height: 95%;
   min-width: 900px;
+  display: flex;
 }
 
 /* specific styles */
@@ -33,7 +34,8 @@ li {
   height: 100%;
 }
 /* aside header */
-aside header {
+aside header,
+.main-section header {
   height: 9%;
   padding: 10px;
   display: flex;
@@ -130,4 +132,31 @@ aside .options > * {
 }
 .contact span {
   margin-left: 10px;
+}
+/* MAIN SECTION */
+.main-section {
+  flex-grow: 1;
+}
+/* main section header */
+.main-section header {
+  border-left: 1px solid #bababa;
+}
+.main-section header .user {
+  display: flex;
+  align-items: center;
+}
+.last-online {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #848a8d;
+}
+.main-section header .options {
+  display: flex;
+  align-items: center;
+  color: #bababa;
+}
+.main-section header .options > * {
+  font-size: 20px;
+  margin: 0px 10px;
 }
