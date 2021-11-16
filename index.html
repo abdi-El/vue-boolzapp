@@ -40,9 +40,15 @@
                     <span><u>Attiva notifiche desktop</u></span>
                 </div>
             </div>
-            <div class="search"></div>
+            <div class="search">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+            </div>
             <ul class="contacts-list">
-                <li class="contact"></li>
+                <li class="contact" v-for='contact in contacts'>
+                    <img :src="'./img/avatar'+contact.avatar+'.jpg'" alt="chat friend img" class="user-image">
+                    <span>{{contact.name}}</span>
+                </li>
             </ul>
         </aside>
         <!-- main section location of the current chat  -->

@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: linear-gradient(#32a093 20%, #dbe0dd 20% 100%);
+  background-image: linear-gradient(#32a093 15%, #dbe0dd 15% 100%);
 }
 li {
   list-style: none;
@@ -47,11 +47,11 @@ aside header {
   height: 100%;
   vertical-align: middle;
   border-radius: 50%;
-  margin-left: 5px;
 }
 .user-name {
   font-size: 14px;
   font-weight: 500;
+  margin-left: 5px;
 }
 /* aside header options */
 aside .options {
@@ -69,7 +69,6 @@ aside .options > * {
 /* aside notification */
 .notification {
   display: flex;
-  height: 10%;
   background-color: #a2dffe;
   padding: 15px;
 }
@@ -95,4 +94,40 @@ aside .options > * {
 .bell-text span:last-child {
   font-size: 0.8rem;
   color: #888787;
+}
+/* aside search */
+.search {
+  display: flex;
+  padding: 8px;
+  background-color: #ededed;
+}
+.search button {
+  width: 20%;
+  height: 30px;
+  display: inline-block;
+  background-color: white;
+  border: 0.5px solid rgb(235, 231, 231);
+  color: #bababa;
+}
+.search input {
+  width: 80%;
+  height: 100%;
+  padding: 5px;
+  display: inline-block;
+  background-color: white;
+  border: 0.5px solid rgb(233, 230, 230);
+  color: #bababa;
+}
+
+.contacts-list {
+  flex-grow: 1;
+  background-color: white;
+}
+.contact {
+  height: 75px;
+  padding: 10px;
+  background-color: white;
+}
+.contact span {
+  margin-left: 10px;
 }
