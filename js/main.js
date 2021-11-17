@@ -85,7 +85,36 @@ const root =  new Vue({
                     }
                 ],
             },
-        ]
-        
+        ],
+        newInput: '',
+        activeChat: 0
+    },
+    methods:{
+        chatOpen(contactIndex){
+            this.activeChat = contactIndex
+        },
+        sendMessage(){
+            newMessage = {
+                date:this.getDate(),
+                text: this.newInput,
+                status: 'sent'
+            };
+            this.contacts[this.activeChat].messages.push(newMessage);
+            newMessage = {}
+            this.newInput = '';
+            this.botAnswer(newMessage)
+        },
+        botAnswer(messakeObj){
+            setTimeout(()=>{
+                messakeObj.text = 'ok'
+                messakeObj.status = 'received'
+                messakeObj.date = this.getDate()
+                this.contacts[this.activeChat].messages.push(messakeObj)
+            }, 1000)
+        },
+        getDate(){
+            const now = dayjs()
+            return now.format('DD/MM/YYYY H:mm:ss')
+        }
     } 
 })

@@ -16,35 +16,7 @@ body {
 li {
   list-style: none;
 }
-.message {
-  height: 50px;
-  width: 40%;
-  margin-top: 50px;
-  padding: 0px 10px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.sent {
-  background-color: #ddfabf;
-  align-self: flex-end;
-}
-.recieved {
-  background-color: white;
-  align-self: flex-start;
-  margin-top: 50px;
-}
-.message-text {
-  text-align: left;
-  line-height: 80%;
-  vertical-align: middle;
-}
-.message-date {
-  text-align: right;
-  font-size: 10px;
-  color: #bec1c3;
-}
+
 /* UTILITIES */
 .container {
   width: 85%;
@@ -52,7 +24,9 @@ li {
   min-width: 900px;
   display: flex;
 }
-
+.active {
+  background-color: #ededed !important;
+}
 /* specific styles */
 /* ASIDE */
 .contacts {
@@ -203,6 +177,35 @@ main {
   display: flex;
   flex-direction: column;
 }
+.message {
+  height: 50px;
+  width: 40%;
+  margin-top: 50px;
+  padding: 0px 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sent {
+  background-color: #ddfabf;
+  align-self: flex-end;
+}
+.recieved {
+  background-color: white;
+  align-self: flex-start;
+  margin-top: 50px;
+}
+.message-text {
+  text-align: left;
+  line-height: 80%;
+  vertical-align: middle;
+}
+.message-date {
+  text-align: right;
+  font-size: 10px;
+  color: #bec1c3;
+}
 /* main section footer */
 footer {
   height: 9%;
@@ -231,5 +234,4 @@ footer input {
 /* effects */
 .contact:hover {
   cursor: pointer;
-  background-color: #ededed;
 }

@@ -45,7 +45,7 @@
                 <input type="text" placeholder="Cerca o inizia una nuova chat">
             </div>
             <ul class="contacts-list">
-                <li class="contact" v-for='contact in contacts'>
+                <li class="contact" v-for='(contact, index) in contacts' @click='chatOpen(index)' :class='{active: index == activeChat}'>
                     <img :src="'./img/avatar'+contact.avatar+'.jpg'" alt="chat friend img" class="user-image">
                     <span>{{contact.name}}</span>
                 </li>
@@ -55,9 +55,9 @@
         <section class="main-section">
             <header>
                 <div class="user">
-                    <img src="./img/avatar_1.jpg" alt="chat user image" class="user-image">
+                    <img :src=`./img/avatar${contacts[activeChat].avatar}.jpg` alt="chat user image" class="user-image">
                     <div>
-                        <span>Michele</span>
+                        <span>{{contacts[activeChat].name}}</span>
                         <span class='last-online'>Ultimo accesso oggi alle 10.35</span>
                     </div>
                 </div>
@@ -69,13 +69,9 @@
             </header>
             <main>
                 <div class="message-container">
-                    <div class="sent message">
-                        <div class="message-text">Messaggio inviato</div>
-                        <div class="message-date">data</div>
-                    </div>
-                    <div class="recieved message">
-                        <div class="message-text">Messaggio inviato</div>
-                        <div class="message-date">data</div>
+                    <div class="message" v-for='message in contacts[activeChat].messages' :class='{sent: message.status === "sent", recieved: message.status === "received" }'>
+                        <div class="message-text">{{message.text}}</div>
+                        <div class="message-date">{{message.date}}</div>
                     </div>
                 </div>
             </main>
@@ -83,7 +79,7 @@
                 <div class="attach-chat emoticoms">
                     <i class="fa-regular fa-face-smile"></i>
                 </div>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input type="text" placeholder="Scrivi un messaggio" v-model.trim='newInput' @keyup.enter='sendMessage'>
                 <div class="attach-chat vocal">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
@@ -92,6 +88,7 @@
     </div>
 
     <!-- javascript with VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./js/main.js"></script>
 </body>
