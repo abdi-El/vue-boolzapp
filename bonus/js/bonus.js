@@ -129,7 +129,6 @@ const root =  new Vue({
             this.$refs.deleteOption[index].classList.toggle('displayNone')
         },
         deleteMessage(index){
-            console.log(this.$refs.delete[index])
             this.$refs.delete[index].classList.add('displayNone')
         }
     } 
