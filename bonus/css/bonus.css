@@ -1,0 +1,258 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+/* GENERAL */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(#32a093 15%, #dbe0dd 15% 100%);
+}
+li {
+  list-style: none;
+}
+
+/* UTILITIES */
+.container {
+  width: 85%;
+  height: 95%;
+  min-width: 900px;
+  display: flex;
+}
+.active {
+  background-color: #ededed !important;
+}
+.displayNone {
+  display: none !important;
+}
+/* specific styles */
+/* ASIDE */
+.contacts {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100%;
+}
+/* aside header */
+aside header,
+.main-section header {
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ededed;
+}
+.user {
+  width: 70%;
+}
+.user-image {
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+/* aside header options */
+aside .options {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+aside .options > * {
+  color: #bababa;
+  display: inline;
+  vertical-align: middle;
+  line-height: 100%;
+}
+/* aside notification */
+.notification {
+  display: flex;
+  background-color: #a2dffe;
+  padding: 15px;
+}
+.bell {
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a2dffe;
+  background-color: white;
+  border-radius: 50%;
+}
+.bell-text > * {
+  display: block;
+  line-height: 20px;
+  margin: 0px 10px;
+}
+.bell-text span:first-child {
+  font-size: 14px;
+}
+.bell-text span:last-child {
+  font-size: 0.8rem;
+  color: #888787;
+}
+/* aside search */
+.search {
+  display: flex;
+  padding: 8px;
+  background-color: #fbfbfb;
+}
+.search button {
+  width: 20%;
+  height: 30px;
+  display: inline-block;
+  background-color: white;
+  border: 0.1px solid #f6f6f6;
+  color: #bababa;
+}
+.search input {
+  width: 80%;
+  height: 100%;
+  padding: 5px;
+  display: inline-block;
+  background-color: white;
+  border: 0.1px solid #f6f6f6;
+  color: #bababa;
+}
+
+.contacts-list {
+  flex-grow: 1;
+  background-color: white;
+}
+.contact {
+  height: 75px;
+  padding: 10px;
+  background-color: white;
+  border-top: 1px solid #ededed;
+}
+.contact span {
+  margin-left: 10px;
+}
+/* MAIN SECTION */
+.main-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* main section header */
+.main-section header {
+  border-left: 1px solid #bababa;
+}
+.main-section header .user {
+  display: flex;
+  align-items: center;
+}
+.last-online {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #848a8d;
+}
+.main-section header .options {
+  display: flex;
+  align-items: center;
+  color: #bababa;
+}
+.main-section header .options > * {
+  font-size: 20px;
+  margin: 0px 10px;
+}
+/* main-section main */
+main {
+  flex-grow: 1;
+  background-image: url("/img/mine.jpg");
+}
+.message-container {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.message {
+  height: 50px;
+  width: 40%;
+  margin-top: 50px;
+  padding: 0px 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.sent {
+  background-color: #ddfabf;
+  align-self: flex-end;
+}
+.recieved {
+  background-color: white;
+  align-self: flex-start;
+  margin-top: 50px;
+}
+.message-text {
+  text-align: left;
+  line-height: 80%;
+  vertical-align: middle;
+}
+.message-date {
+  text-align: right;
+  font-size: 10px;
+  color: #bec1c3;
+}
+.delete-message {
+  position: absolute;
+  height: 50px;
+  width: 115px;
+  background: white;
+  right: 0%;
+  top: 90%;
+  border-radius: 10px;
+}
+.delete-message span {
+  line-height: 50px;
+}
+.delete-message:hover {
+  background: #bec1c3;
+  color: white;
+  cursor: pointer;
+}
+/* main section footer */
+footer {
+  height: 9%;
+  display: flex;
+  background-color: #f4f0ed;
+  border-left: 1px solid #c9c7c6;
+  padding: 10px;
+}
+footer input {
+  flex-grow: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.attach-chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-size: 30px;
+  color: #777e82;
+}
+
+/* effects */
+.contact:hover {
+  cursor: pointer;
+}
